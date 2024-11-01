@@ -1,0 +1,136 @@
+/* variables  */
+:root {
+    --primary: #ec7f13;
+    --primary-text: rgb(237, 237, 237);
+    --primary-text-dark: black;
+    --paragraph-text-dark: black;
+    --paragraph-text: rgb(210, 210, 210);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.shop-sec-1 {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 50PX;
+    margin-top: 50px;
+}
+
+/* @media (orientation: portrait) {
+    .shop-sec-1 {
+        flex-wrap: wrap;
+    }
+} */
+/* @media (max-width:120px) { */
+
+@media (max-width:650px) {
+    .shop-sec-1 {
+        flex-wrap: wrap;
+    }
+}
+
+
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card::before {
+    position: absolute;
+    content: "";
+    background-color: black;
+    background-color: var(--primary);
+    height: 85%;
+    width: 95%;
+    z-index: -1;
+    top: 20px;
+    transform: rotate(5deg);
+    right: 25px;
+}
+
+.product-top img {
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+.product-top img:hover {
+    opacity: 1;
+    box-shadow: -6px -6px 15px black;
+    transform: translate(8px, 8px);
+}
+
+.product-bottom p {
+    font-size: 12px;
+}
+
+.product-bottom {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price-label {
+    font-size: 1rem;
+    color: #777;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* color: var(--paragraph-text-dark); */
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: .3s;
+    /* transition: .3s 3s; */
+    /* transition-delay: 3s; */
+
+}
+
+.primary-btn:hover {
+    background-color: var(--primary);
+    color: var(--primary-text);
+}

@@ -1,0 +1,274 @@
+/* primary color: 10%
+secondary-color: 30
+###-color: 60 */
+
+/* https://colorhunt.co/ */
+
+/* primay-color: #ec7f13  */
+
+/* section vise chlna  */
+/* Free pics: 
+https://unsplash.com/
+https://www.pexels.com/
+https://pixabay.com/
+*/
+
+/* for box shadow goto : https://getcssscan.com/css-box-shadow-examples  */
+/* Transform: https://www.w3schools.com/css/css3_2dtransforms.asp */
+/* animation deep dive: https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+
+/* reset CSS  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables  */
+:root {
+    --primary: #ec7f13;
+    --primary-text: rgb(237, 237, 237);
+    --primary-text-dark: black;
+    --paragraph-text-dark: black;
+    --paragraph-text: rgb(210, 210, 210);
+}
+
+.primary-text {
+    color: var(--primary-text);
+    font-size: 2.5rem;
+}
+
+@media (max-width:500px) {
+    html {
+        /* font-size: 9px; */
+        /*9*2.5*/
+    }
+}
+
+.paragraph-text {
+    color: var(--paragraph-text);
+    font-size: 1.3rem;
+}
+
+.primary-text-dark {
+    color: var(--primary-text-dark);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.paragraph-text-dark {
+    color: var(--paragraph-text-dark);
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+
+.sections-gap {
+    margin-top: 7rem;
+}
+
+/* temporary CSS */
+.border-1 {
+    border: 2px solid red;
+}
+
+.border-2 {
+    border: 2px solid green;
+}
+
+body {
+    /* border: 10px solid black; */
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 100; */
+    font-style: normal;
+    background-color: #f0f0f0;
+}
+
+
+/* select by tag  */
+main {
+    max-width: 1024px;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+@media (max-width:1070px) {
+    main {
+        padding: 0px 20px;
+    }
+}
+
+/* navbar styling  */
+nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1rem 0;
+}
+
+nav h1 {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    /* color: #ec7f13 !important; */
+    color: #ec7f13;
+    /* font-weight: 500; */
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/* nav ul li a:active {
+    color: red;
+} */
+
+/* nav ul li a:any-link {
+    color: red;
+} */
+
+nav ul li a:hover {
+    color: red;
+}
+
+
+/* section 1 styling  */
+.section-1 {
+    background: url("https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg") center/cover no-repeat;
+    height: 550px;
+    display: flex;
+    position: relative;
+}
+
+.section-1 .overlay {
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.section-1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1-text {
+    width: 80%;
+    text-align: center;
+    z-index: 2;
+    color: var(--primary-text);
+    /* font-size: 2rem; */
+}
+
+
+
+
+/* section-2 styling  */
+.section-2 h2 {}
+
+.top-products-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width:800px) {
+    .top-products-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width:500px) {
+    .top-products-container {
+        grid-template-columns: auto;
+    }
+}
+
+.top-product:hover {
+    transform: translateY(5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 7px 29px 0px;
+    transition: .7s ease;
+}
+
+.top-product {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.product-top img {
+    width: 100%;
+}
+
+.product-bottom {
+    padding: 1rem;
+}
+
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+}
+
+.top-shoes {
+    text-align: center;
+    max-width: 200px;
+}
+
+.top-shoes img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.top-shoes h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: black;
+}
+
+.top-shoes p {
+    font-size: 16px;
+    color: black;
+    margin: 5px 0;
+}
+
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.sponsor {
+    text-align: center;
+    max-width: 200px;
+}
+
+.sponsor img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
